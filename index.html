@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GAA Performance | Strength, Speed & Power for GAA Players</title>
+<meta name="description" content="Strength, speed, power and fitness programmes built only for GAA players in Ireland. Get stronger, run faster and cut your injury risk.">
+<meta name="theme-color" content="#0b1a14">
+<meta property="og:title" content="GAA Performance">
+<meta property="og:description" content="Strength, speed, power and fitness built only for GAA players.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gaaperformance.ie/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1a14'/%3E%3Cpath d='M14 44 28 16l8 16 6-10 8 22z' fill='%2320d070'/%3E%3C/svg%3E">
+
+<style>
+:root{
+  --ink:#0b1a14;
+  --ink-2:#112a20;
+  --ink-3:#183828;
+  --pitch:#20d070;
+  --pitch-dark:#14a656;
+  --chalk:#f5f2ea;
+  --mute:#9fb5a9;
+  --line:rgba(245,242,234,.12);
+  --gold:#f4b62e;
+  --radius:16px;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--ink);color:var(--chalk);line-height:1.55;font-size:17px;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.05;letter-spacing:-.02em;font-weight:900;text-transform:uppercase}
+h1{font-size:clamp(2.5rem,9vw,5rem)}
+h2{font-size:clamp(1.9rem,6vw,3.1rem)}
+h3{font-size:1.25rem;letter-spacing:-.01em}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--pitch);margin-bottom:14px}
+.lead{color:var(--mute);font-size:1.1rem;max-width:56ch}
+section{padding:72px 0}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:52px;padding:0 26px;border-radius:999px;border:0;cursor:pointer;
+  font:inherit;font-weight:800;font-size:1rem;letter-spacing:.02em;text-decoration:none;
+  background:var(--pitch);color:var(--ink);transition:transform .15s,background .15s;
+}
+.btn:hover{background:#3ae284;transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:transparent;color:var(--chalk);border:1.5px solid var(--line)}
+.btn.ghost:hover{background:rgba(245,242,234,.06)}
+.btn.block{width:100%}
+
+/* header */
+header.top{
+  position:sticky;top:0;z-index:50;background:rgba(11,26,20,.88);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:900;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo span{color:var(--pitch)}
+.logo svg{width:28px;height:28px}
+nav.links{display:none;gap:28px;font-weight:600;font-size:.95rem}
+nav.links a{text-decoration:none;color:var(--mute)}
+nav.links a:hover{color:var(--chalk)}
+header.top .btn{min-height:42px;padding:0 18px;font-size:.9rem}
+@media(min-width:800px){nav.links{display:flex}}
+
+/* hero */
+.hero{padding:56px 0 72px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 500px at 85% -10%,rgba(32,208,112,.22),transparent 60%),
+    linear-gradient(180deg,var(--ink) 0%,var(--ink-2) 100%);
+}
+.hero::after{ /* pitch line motif */
+  content:"";position:absolute;right:-140px;bottom:-140px;width:420px;height:420px;border-radius:50%;
+  border:2px solid rgba(32,208,112,.18);box-shadow:0 0 0 46px rgba(32,208,112,.05);pointer-events:none;
+}
+.hero h1 em{font-style:normal;color:var(--pitch)}
+.hero .lead{margin:20px 0 30px}
+.hero-grid{display:grid;gap:36px;position:relative;z-index:1}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;align-items:center}}
+
+.capture{background:var(--chalk);color:var(--ink);border-radius:var(--radius);padding:26px}
+.capture h3{font-size:1.35rem;margin-bottom:8px}
+.capture p{color:#3b4a42;font-size:.97rem;margin-bottom:18px}
+.capture ul{list-style:none;margin:0 0 18px;display:grid;gap:8px;font-size:.95rem;font-weight:600}
+.capture li::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--pitch-dark);margin-right:10px}
+.field{display:grid;gap:10px}
+.field input[type=email],.field input[type=text]{
+  width:100%;min-height:52px;padding:0 16px;border-radius:12px;border:1.5px solid #c9d2cc;
+  font:inherit;font-size:1rem;background:#fff;color:var(--ink);
+}
+.field input:focus{outline:3px solid rgba(32,208,112,.45);border-color:var(--pitch-dark)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;color:#4b5a52;margin-top:12px}
+.consent input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--pitch-dark)}
+.consent a{color:var(--pitch-dark);font-weight:700}
+.form-msg{margin-top:12px;font-weight:700;font-size:.95rem;min-height:1.2em}
+.form-msg.ok{color:var(--pitch-dark)}
+.form-msg.err{color:#c0392b}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+
+/* stats strip */
+.strip{background:var(--pitch);color:var(--ink);padding:0}
+.strip ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr)}
+.strip li{padding:22px 18px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;font-size:1rem;border-bottom:1px solid rgba(11,26,20,.15)}
+.strip li:nth-child(odd){border-right:1px solid rgba(11,26,20,.15)}
+.strip li:last-child{grid-column:1/-1;border-bottom:0;border-right:0}
+@media(min-width:800px){
+  .strip ul{grid-template-columns:repeat(5,1fr)}
+  .strip li{border-bottom:0;border-right:1px solid rgba(11,26,20,.15);text-align:center}
+  .strip li:last-child{grid-column:auto;border-right:0}
+}
+
+/* pillars */
+.cards{display:grid;gap:16px;margin-top:36px}
+@media(min-width:700px){.cards.c2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.cards.c3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.card .num{font-weight:900;color:var(--pitch);font-size:.9rem;letter-spacing:.14em;margin-bottom:10px}
+.card p{color:var(--mute);margin-top:10px;font-size:.98rem}
+
+/* audience */
+.alt{background:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);font-weight:700;font-size:.95rem}
+
+/* programmes */
+.prog{display:flex;flex-direction:column}
+.prog.featured{border-color:var(--pitch);background:linear-gradient(180deg,var(--ink-3),var(--ink-2))}
+.tag{align-self:flex-start;background:var(--gold);color:var(--ink);font-weight:900;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.price{font-size:2.4rem;font-weight:900;margin:14px 0 4px;letter-spacing:-.02em}
+.price small{font-size:.9rem;color:var(--mute);font-weight:600;letter-spacing:0}
+.prog ul{list-style:none;display:grid;gap:9px;margin:18px 0 24px;color:var(--chalk);font-size:.96rem}
+.prog li{display:flex;gap:10px}
+.prog li::before{content:"\2713";color:var(--pitch);font-weight:900}
+.prog .btn{margin-top:auto}
+
+/* steps */
+.steps{counter-reset:s;display:grid;gap:16px;margin-top:36px}
+@media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{counter-increment:s;position:relative;padding-top:54px}
+.step::before{content:counter(s);position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;background:var(--pitch);color:var(--ink);font-weight:900;display:grid;place-items:center}
+.step p{color:var(--mute);margin-top:8px}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-weight:800;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--pitch);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--mute);margin-top:12px;max-width:64ch}
+
+/* final cta */
+.final{text-align:center;background:
+  radial-gradient(700px 320px at 50% 0,rgba(32,208,112,.2),transparent 70%),var(--ink)}
+.final .lead{margin:16px auto 28px}
+.final .capture{max-width:520px;margin:0 auto;text-align:left}
+
+footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--mute);font-size:.88rem}
+footer .wrap{display:grid;gap:14px}
+footer nav{display:flex;flex-wrap:wrap;gap:18px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--chalk)}
+.disc{font-size:.8rem;opacity:.8;max-width:80ch}
+
+/* mobile sticky CTA */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(11,26,20,.94);border-top:1px solid var(--line);backdrop-filter:blur(10px);
+  transform:translateY(110%);transition:transform .25s;
+}
+.sticky-cta.show{transform:none}
+.sticky-cta .btn{width:100%}
+@media(min-width:800px){.sticky-cta{display:none}}
+
+:focus-visible{outline:3px solid var(--pitch);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="GAA Performance home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#20d070"/><path d="M14 44 28 16l8 16 6-10 8 22z" fill="#0b1a14"/></svg>
+      GAA<span>Performance</span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#why">Why it works</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#get-primer" class="btn">Free Primer</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Built only for GAA players</span>
+      <h1>Be faster. Hit harder. <em>Stay on the pitch.</em></h1>
+      <p class="lead">Strength, speed, power and fitness programmes designed around the demands of hurling, football and camogie, with injury risk reduction built into every session.</p>
+      <a href="#programmes" class="btn">See the programmes</a>
+      <a href="#why" class="btn ghost" style="margin-left:8px">How it works</a>
+    </div>
+
+    <aside class="capture" id="get-primer" aria-labelledby="cap-title">
+      <h3 id="cap-title">Free GAA Performance Primer</h3>
+      <p>A short, no-fluff guide to getting fitter, faster and more robust for the season ahead.</p>
+      <ul>
+        <li>Weekly training structure for in-season and off-season</li>
+        <li>Simple sprint and power drills you can do at the pitch</li>
+        <li>Injury-prevention basics for hamstrings, groin and knees</li>
+      </ul>
+      <form class="lead-form" novalidate>
+        <div class="field">
+          <input type="text" name="name" placeholder="First name" autocomplete="given-name" aria-label="First name">
+          <input type="email" name="email" placeholder="Your email" autocomplete="email" required aria-label="Email address">
+          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn block" type="submit">Send me the primer</button>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>I agree to receive training emails from GAA Performance. Unsubscribe any time. See our <a href="/privacy.html">privacy policy</a>.</span>
+        </label>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </aside>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip" aria-label="What we train">
+  <div class="wrap">
+    <ul>
+      <li>Strength</li><li>Speed</li><li>Power</li><li>Fitness</li><li>Injury resilience</li>
+    </ul>
+  </div>
+</div>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <span class="eyebrow">Why GAA Performance</span>
+    <h2>Generic gym plans<br>don't play like a match</h2>
+    <p class="lead" style="margin-top:16px">GAA is repeated sprints, hard contact, changes of direction and long seasons on top of work and college. Your training should match that.</p>
+
+    <div class="cards c3">
+      <article class="card">
+        <div class="num">01</div>
+        <h3>Strength that transfers</h3>
+        <p>Lower-body and trunk strength that carries into the tackle, the jump and the last ten minutes.</p>
+      </article>
+      <article class="card">
+        <div class="num">02</div>
+        <h3>Speed and power</h3>
+        <p>Acceleration, top-end speed and explosive power trained in a way that fits around your club schedule.</p>
+      </article>
+      <article class="card">
+        <div class="num">03</div>
+        <h3>Fitness for match demands</h3>
+        <p>Conditioning built around the stop-start intensity of a game, not steady jogging.</p>
+      </article>
+      <article class="card">
+        <div class="num">04</div>
+        <h3>Lower injury risk</h3>
+        <p>Hamstring, groin, knee and ankle robustness work built into your week, not bolted on afterwards.</p>
+      </article>
+      <article class="card">
+        <div class="num">05</div>
+        <h3>Planned around your season</h3>
+        <p>Off-season build, pre-season sharpening and in-season maintenance, so you peak when it counts.</p>
+      </article>
+      <article class="card">
+        <div class="num">06</div>
+        <h3>Fits real life</h3>
+        <p>Sessions are short, clear and doable with limited kit, whether you're in a full gym or a garage.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Who it's for</span>
+    <h2>Every code. Every position.</h2>
+    <p class="lead" style="margin-top:16px">Club, college and county players who want to take their game seriously.</p>
+    <div class="chips">
+      <span class="chip">Hurling</span><span class="chip">Gaelic football</span><span class="chip">Camogie</span><span class="chip">Ladies football</span>
+      <span class="chip">Forwards</span><span class="chip">Midfielders</span><span class="chip">Backs</span><span class="chip">Goalkeepers</span>
+      <span class="chip">Minor &amp; U20</span><span class="chip">Senior</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMMES -->
+<section id="programmes">
+  <div class="wrap">
+    <span class="eyebrow">Programmes</span>
+    <h2>Pick your starting point</h2>
+    <p class="lead" style="margin-top:16px">Secure checkout with Stripe. Instant access after payment.</p>
+
+    <div class="cards c3">
+      <article class="card prog">
+        <h3>Speed &amp; Power Block</h3>
+        <p>A focused block to sharpen acceleration and explosiveness.</p>
+        <div class="price">€39 <small>one-off</small></div>
+        <ul>
+          <li>4-week programme</li>
+          <li>Sprint and jump progressions</li>
+          <li>Video demos for every exercise</li>
+        </ul>
+        <a class="btn" data-stripe="speed" href="#" rel="noopener">Get the Block</a>
+      </article>
+
+      <article class="card prog featured">
+        <span class="tag">Most popular</span>
+        <h3>Complete GAA Season</h3>
+        <p>Strength, speed, fitness and injury prevention in one plan.</p>
+        <div class="price">€79 <small>one-off</small></div>
+        <ul>
+          <li>12-week programme, phased by season</li>
+          <li>Gym and no-gym versions</li>
+          <li>Injury-resilience routines</li>
+          <li>Conditioning sessions built for matches</li>
+        </ul>
+        <a class="btn" data-stripe="season" href="#" rel="noopener">Get the Season Plan</a>
+      </article>
+
+      <article class="card prog">
+        <h3>1:1 Online Coaching</h3>
+        <p>A plan built around you, reviewed and adjusted as you go.</p>
+        <div class="price">€149 <small>per month</small></div>
+        <ul>
+          <li>Individual programme for your position</li>
+          <li>Weekly check-ins and adjustments</li>
+          <li>Direct messaging support</li>
+        </ul>
+        <a class="btn ghost" data-stripe="coaching" href="#" rel="noopener">Start Coaching</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how" class="alt">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2>Simple from day one</h2>
+    <div class="steps">
+      <div class="step"><h3>Choose your plan</h3><p>Start with the free primer or pick the programme that fits your stage of the season.</p></div>
+      <div class="step"><h3>Train on your schedule</h3><p>Follow clear sessions with video guidance. Work around club nights and matches.</p></div>
+      <div class="step"><h3>Show up sharper</h3><p>Track your progress and carry the gains into match day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">FAQ</span>
+    <h2>Questions players ask</h2>
+    <div style="margin-top:30px">
+      <details><summary>Do I need a gym?</summary><p>No. The programmes come with gym and minimal-equipment versions so you can train wherever you can.</p></details>
+      <details><summary>Can I do this in-season?</summary><p>Yes. The Season Plan is phased so in-season weeks are lighter and built around your matches and club training.</p></details>
+      <details><summary>Is it suitable for younger players?</summary><p>Programmes are aimed at adult and older teenage players. Younger players should train under the guidance of a qualified coach and their parent or guardian.</p></details>
+      <details><summary>I've had an injury before. Can I still follow it?</summary><p>Injury history varies a lot. If you're carrying or returning from an injury, check with your physio or doctor before starting any programme.</p></details>
+      <details><summary>How do I get access after paying?</summary><p>You'll get an email straight away with your programme link. If it doesn't arrive, check your spam folder or contact us.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow">Start now</span>
+    <h2>Get the free primer</h2>
+    <p class="lead">Join GAA players getting smarter about how they train. Straight to your inbox.</p>
+    <div class="capture">
+      <form class="lead-form" novalidate>
+        <div class="field">
+          <input type="text" name="name" placeholder="First name" autocomplete="given-name" aria-label="First name">
+          <input type="email" name="email" placeholder="Your email" autocomplete="email" required aria-label="Email address">
+          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn block" type="submit">Send me the primer</button>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>I agree to receive training emails from GAA Performance. Unsubscribe any time. See our <a href="/privacy.html">privacy policy</a>.</span>
+        </label>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">GAA<span>Performance</span></div>
+    <nav aria-label="Footer">
+      <a href="#programmes">Programmes</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="https://www.instagram.com/" rel="noopener" data-social="instagram">Instagram</a>
+      <a href="https://www.tiktok.com/" rel="noopener" data-social="tiktok">TikTok</a>
+      <a href="mailto:hello@gaaperformance.ie">hello@gaaperformance.ie</a>
+    </nav>
+    <p class="disc">GAA Performance is an independent training brand and is not affiliated with or endorsed by the Gaelic Athletic Association. Training information is general guidance and not medical advice. Speak to a doctor or physiotherapist before starting a new programme, especially if you have an injury or health condition.</p>
+    <p>&copy; <span id="yr">2026</span> GAA Performance. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta"><a class="btn" href="#get-primer">Get the free primer</a></div>
+
+<script>
+/* ============ CONFIG: fill these in before going live ============ */
+const CONFIG = {
+  // Where the email form posts. Use your email provider's form endpoint
+  // (e.g. MailerLite / ConvertKit / Brevo / Mailchimp) or a serverless function.
+  emailEndpoint: "",                // e.g. "https://your-endpoint.example/subscribe"
+
+  // Stripe Payment Links (Dashboard > Payment links). Paste the full URLs.
+  stripe: {
+    speed:    "",                   // https://buy.stripe.com/...
+    season:   "",                   // https://buy.stripe.com/...
+    coaching: ""                    // https://buy.stripe.com/... (recurring price)
+  },
+
+  // Ad tracking. Leave blank to disable.
+  metaPixelId:   "",                // Meta (Instagram/Facebook) Pixel ID
+  tiktokPixelId: "",                // TikTok Pixel ID
+
+  // Social profile URLs
+  instagramUrl: "",
+  tiktokUrl:    ""
+};
+/* ================================================================== */
+
+(function(){
+  // Year
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // Socials
+  document.querySelectorAll("[data-social]").forEach(function(a){
+    var u = CONFIG[a.dataset.social + "Url"];
+    if(u) a.href = u;
+  });
+
+  // Tracking helpers
+  function track(fbEvent, ttEvent, data){
+    try{ if(window.fbq) fbq("track", fbEvent, data||{}); }catch(e){}
+    try{ if(window.ttq) ttq.track(ttEvent, data||{}); }catch(e){}
+  }
+
+  // Meta Pixel
+  if(CONFIG.metaPixelId){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", CONFIG.metaPixelId); fbq("track","PageView");
+  }
+  // TikTok Pixel
+  if(CONFIG.tiktokPixelId){
+    !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{};ttq._i[e]=[];ttq._i[e]._u=i;ttq._t=ttq._t||{};ttq._t[e]=+new Date;ttq._o=ttq._o||{};ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript";o.async=!0;o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};ttq.load(CONFIG.tiktokPixelId);ttq.page()}(window,document,"ttq");
+  }
+
+  // Preserve UTM params on Stripe links so ad sources can be traced
+  var params = new URLSearchParams(location.search);
+  var utm = ["utm_source","utm_medium","utm_campaign","utm_content"].filter(function(k){return params.get(k)});
+
+  // Stripe buttons
+  document.querySelectorAll("[data-stripe]").forEach(function(a){
+    a.addEventListener("click", function(e){
+      var url = CONFIG.stripe[a.dataset.stripe];
+      e.preventDefault();
+      if(!url){ alert("Checkout isn't connected yet. Add your Stripe Payment Link in CONFIG."); return; }
+      track("InitiateCheckout","InitiateCheckout",{content_name:a.dataset.stripe});
+      try{
+        var u = new URL(url);
+        if(utm.length){ u.searchParams.set("client_reference_id", utm.map(function(k){return params.get(k)}).join("_").slice(0,200)); }
+        url = u.toString();
+      }catch(err){}
+      location.href = url;
+    });
+  });
+
+  // Email forms
+  document.querySelectorAll(".lead-form").forEach(function(form){
+    var msg = form.querySelector(".form-msg");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      msg.className = "form-msg"; msg.textContent = "";
+      var email = form.email.value.trim();
+      if(form.company.value){ return; } // honeypot
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ msg.className="form-msg err"; msg.textContent="Please enter a valid email."; return; }
+      if(!form.consent.checked){ msg.className="form-msg err"; msg.textContent="Please tick the box to agree."; return; }
+
+      var payload = { email: email, name: form.name.value.trim(), source: params.get("utm_source")||"", campaign: params.get("utm_campaign")||"", medium: params.get("utm_medium")||"", page: location.pathname, consent: true, ts: new Date().toISOString() };
+      var btn = form.querySelector("button"); btn.disabled = true;
+
+      function done(){
+        track("Lead","SubmitForm");
+        msg.className = "form-msg ok";
+        msg.textContent = "You're in. Check your inbox for the primer.";
+        form.reset(); btn.disabled = false;
+      }
+      function fail(){
+        msg.className = "form-msg err";
+        msg.textContent = "Something went wrong. Please try again.";
+        btn.disabled = false;
+      }
+
+      if(!CONFIG.emailEndpoint){ // demo mode until an endpoint is configured
+        console.warn("emailEndpoint not set. Payload:", payload);
+        done(); return;
+      }
+      fetch(CONFIG.emailEndpoint, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload) })
+        .then(function(r){ r.ok ? done() : fail(); })
+        .catch(fail);
+    });
+  });
+
+  // Sticky mobile CTA: show after scrolling past the hero capture box
+  var cta = document.getElementById("stickyCta");
+  var box = document.getElementById("get-primer");
+  if("IntersectionObserver" in window && cta && box){
+    new IntersectionObserver(function(en){
+      cta.classList.toggle("show", !en[0].isIntersecting && en[0].boundingClientRect.top < 0);
+    }).observe(box);
+  }
+})();
+</script>
+</body>
+</html>
