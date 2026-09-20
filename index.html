@@ -33,7 +33,9 @@
     {"@type":"Question","name":"What's the best GAA strength and conditioning programme?","acceptedAnswer":{"@type":"Answer","text":"One built around GAA's actual demands: repeated sprints, contact, and changes of direction, not a generic gym split. The Complete GAA Season plan combines strength, speed training and injury-resilience work in one 12-week block, phased for the GAA calendar."}},
     {"@type":"Question","name":"How do I prevent hamstring and groin injuries in GAA?","acceptedAnswer":{"@type":"Answer","text":"Regular eccentric hamstring work (like Nordic curls) and adductor/groin strength training are the best-evidenced ways to lower re-injury risk. Every programme includes this as standard."}},
     {"@type":"Question","name":"Do I need a gym for GAA strength training?","acceptedAnswer":{"@type":"Answer","text":"No. The programmes come with gym and minimal-equipment versions so you can train wherever you can."}},
-    {"@type":"Question","name":"Can I do GAA speed and strength training in-season?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Season Plan is phased so in-season weeks are lighter and built around your matches and club training."}}
+    {"@type":"Question","name":"Can I do GAA speed and strength training in-season?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Season Plan is phased so in-season weeks are lighter and built around your matches and club training."}},
+    {"@type":"Question","name":"How do I get access after paying?","acceptedAnswer":{"@type":"Answer","text":"You'll get an email straight away with your TeamBuildr login and your programme already assigned. If it doesn't arrive within a few minutes, check your spam folder or contact us."}},
+    {"@type":"Question","name":"Can I pay with Apple Pay or Google Pay?","acceptedAnswer":{"@type":"Answer","text":"Yes. Checkout is handled by Stripe, which supports card, Apple Pay and Google Pay automatically depending on your device and browser."}}
   ]
 }
 </script>
@@ -165,6 +167,7 @@ header.top .btn{min-height:42px;padding:0 18px;font-size:.9rem}
 .prog li{display:flex;gap:10px}
 .prog li::before{content:"\2713";color:var(--pitch);font-weight:900}
 .prog .btn{margin-top:auto}
+.pay-note{margin-top:10px;font-size:.78rem;color:var(--mute);text-align:center}
 
 /* steps */
 .steps{counter-reset:s;display:grid;gap:16px;margin-top:36px}
@@ -363,7 +366,7 @@ footer a:hover{color:var(--chalk)}
   <div class="wrap">
     <span class="eyebrow">Programmes</span>
     <h2>Pick your starting point</h2>
-    <p class="lead" style="margin-top:16px">Secure checkout with Stripe. Instant access after payment.</p>
+    <p class="lead" style="margin-top:16px">Secure checkout with Stripe &mdash; pay by card, Apple Pay or Google Pay. Your programme is delivered through TeamBuildr, with your login sent straight to your email.</p>
 
     <div class="cards c3">
       <article class="card prog">
@@ -371,11 +374,12 @@ footer a:hover{color:var(--chalk)}
         <p>A focused block to sharpen acceleration and explosiveness.</p>
         <div class="price">€39 <small>one-off</small></div>
         <ul>
-          <li>4-week programme</li>
+          <li>4-week programme in TeamBuildr</li>
           <li>Sprint and jump progressions</li>
           <li>Video demos for every exercise</li>
         </ul>
         <a class="btn" data-stripe="speed" href="#" rel="noopener">Get the Block</a>
+        <p class="pay-note">Card &middot; Apple Pay &middot; Google Pay</p>
       </article>
 
       <article class="card prog featured">
@@ -384,24 +388,26 @@ footer a:hover{color:var(--chalk)}
         <p>Strength, speed, fitness and injury prevention in one plan.</p>
         <div class="price">€79 <small>one-off</small></div>
         <ul>
-          <li>12-week programme, phased by season</li>
+          <li>12-week programme in TeamBuildr, phased by season</li>
           <li>Gym and no-gym versions</li>
           <li>Injury-resilience routines</li>
           <li>Conditioning sessions built for matches</li>
         </ul>
         <a class="btn" data-stripe="season" href="#" rel="noopener">Get the Season Plan</a>
+        <p class="pay-note">Card &middot; Apple Pay &middot; Google Pay</p>
       </article>
 
       <article class="card prog">
         <h3>1:1 Online Coaching</h3>
         <p>A plan built around you, reviewed and adjusted as you go.</p>
-        <div class="price">€149 <small>per month</small></div>
+        <div class="price">€149 <small>per month, cancel anytime</small></div>
         <ul>
-          <li>Individual programme for your position</li>
+          <li>Individual TeamBuildr programme for your position</li>
           <li>Weekly check-ins and adjustments</li>
           <li>Direct messaging support</li>
         </ul>
         <a class="btn ghost" data-stripe="coaching" href="#" rel="noopener">Start Coaching</a>
+        <p class="pay-note">Card &middot; Apple Pay &middot; Google Pay &middot; monthly subscription</p>
       </article>
     </div>
   </div>
@@ -432,7 +438,8 @@ footer a:hover{color:var(--chalk)}
       <details><summary>Can I do GAA speed and strength training in-season?</summary><p>Yes. The Season Plan is phased so in-season weeks are lighter and built around your matches and club training.</p></details>
       <details><summary>Is it suitable for younger players?</summary><p>Programmes are aimed at adult and older teenage players. Younger players should train under the guidance of a qualified coach and their parent or guardian.</p></details>
       <details><summary>I've had an injury before. Can I still follow it?</summary><p>Injury history varies a lot. If you're carrying or returning from an injury, check with your physio or doctor before starting any programme.</p></details>
-      <details><summary>How do I get access after paying?</summary><p>You'll get an email straight away with your programme link. If it doesn't arrive, check your spam folder or contact us.</p></details>
+      <details><summary>How do I get access after paying?</summary><p>You'll get an email straight away with your TeamBuildr login and your programme already assigned. If it doesn't arrive within a few minutes, check your spam folder or contact us.</p></details>
+      <details><summary>Can I pay with Apple Pay or Google Pay?</summary><p>Yes. Checkout is handled by Stripe, which supports card, Apple Pay and Google Pay automatically depending on your device and browser.</p></details>
     </div>
   </div>
 </section>
