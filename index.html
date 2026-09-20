@@ -88,15 +88,17 @@ header.top{
   position:sticky;top:0;z-index:50;background:rgba(11,26,20,.88);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
 }
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:900;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:10px}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-weight:900;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:8px;min-width:0;flex:1 1 auto}
+.logo svg{width:28px;height:28px;flex:none}
+.logo-text{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .logo span{color:var(--pitch)}
-.logo svg{width:28px;height:28px}
 nav.links{display:none;gap:28px;font-weight:600;font-size:.95rem}
 nav.links a{text-decoration:none;color:var(--mute)}
 nav.links a:hover{color:var(--chalk)}
-header.top .btn{min-height:42px;padding:0 18px;font-size:.9rem}
+header.top .btn{min-height:42px;padding:0 16px;font-size:.85rem;flex:none;white-space:nowrap}
 @media(min-width:800px){nav.links{display:flex}}
+@media(max-width:360px){.logo{font-size:.92rem}header.top .btn{padding:0 12px;font-size:.78rem}}
 
 /* hero */
 .hero{padding:56px 0 72px;position:relative;overflow:hidden;
@@ -218,7 +220,7 @@ footer a:hover{color:var(--chalk)}
   <div class="wrap">
     <a href="#top" class="logo" aria-label="GAA Performance home">
       <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#20d070"/><path d="M14 44 28 16l8 16 6-10 8 22z" fill="#0b1a14"/></svg>
-      GAA<span>Performance</span>
+      <span class="logo-text">GAA<span>Performance</span></span>
     </a>
     <nav class="links" aria-label="Main">
       <a href="#why">Why it works</a>
@@ -348,7 +350,7 @@ footer a:hover{color:var(--chalk)}
 </section>
 
 <!-- AUDIENCE -->
-<section class="alt">
+<section class="alt" style="border-top:1px solid var(--line)">
   <div class="wrap">
     <span class="eyebrow">Who it's for</span>
     <h2>Every code. Every position.</h2>
