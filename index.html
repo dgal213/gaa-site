@@ -384,7 +384,7 @@ footer a:hover{color:var(--chalk)}
         <span class="tag">Complete GAA Off-Season Programme</span>
         <h3>Build your engine before the season starts</h3>
         <p>Strength, speed, fitness and injury prevention in one plan, built for the off-season block.</p>
-        <div class="price">€79 <small>one-off</small></div>
+        <div class="price">€160 <small>one-off</small></div>
         <ul>
           <li>12-week programme in TeamBuildr, phased for the off-season</li>
           <li>Gym and no-gym versions</li>
@@ -398,40 +398,13 @@ footer a:hover{color:var(--chalk)}
   </div>
 </section>
 
-<!-- 1:1 COACHING -->
+<!-- 1:1 COACHING (outbound) -->
 <section id="coaching" class="alt">
-  <div class="wrap">
-    <span class="eyebrow">1:1 Coaching</span>
-    <h2>Want more than a programme? Work with me directly</h2>
-    <p class="lead" style="margin-top:16px">A plan built around you, reviewed and adjusted as you go &mdash; choose online-only, or a hybrid mix of in-person and online.</p>
-
-    <div class="cards c2">
-      <article class="card prog">
-        <h3>1:1 Online Coaching</h3>
-        <p>Fully remote &mdash; your programme, check-ins and support, wherever you train.</p>
-        <div class="price">€149 <small>per month, cancel anytime</small></div>
-        <ul>
-          <li>Individual TeamBuildr programme for your position</li>
-          <li>Weekly check-ins and adjustments</li>
-          <li>Direct messaging support</li>
-        </ul>
-        <a class="btn ghost" data-stripe="coachingOnline" href="#" rel="noopener">Start Online Coaching</a>
-        <p class="pay-note">Card &middot; Apple Pay &middot; Google Pay &middot; monthly subscription</p>
-      </article>
-
-      <article class="card prog">
-        <h3>1:1 Hybrid Coaching</h3>
-        <p>Online programming plus in-person sessions for hands-on coaching and testing.</p>
-        <div class="price">€249 <small>per month, cancel anytime</small></div>
-        <ul>
-          <li>Everything in Online Coaching</li>
-          <li>Regular in-person sessions</li>
-          <li>Hands-on technique and testing</li>
-        </ul>
-        <a class="btn ghost" data-stripe="coachingHybrid" href="#" rel="noopener">Start Hybrid Coaching</a>
-        <p class="pay-note">Card &middot; Apple Pay &middot; Google Pay &middot; monthly subscription</p>
-      </article>
-    </div>
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow">Want more than a programme?</span>
+    <h2>Work with me 1:1 &mdash; online or hybrid</h2>
+    <p class="lead" style="margin:16px auto 24px;max-width:640px">Individual coaching, check-ins and in-person sessions are run through Momentum Performance.</p>
+    <a class="btn ghost" href="https://momentumperformance.ie" target="_blank" rel="noopener">Explore 1:1 Coaching at Momentum Performance &rarr;</a>
   </div>
 </section>
 
@@ -520,9 +493,7 @@ const CONFIG = {
 
   // Stripe Payment Links (Dashboard > Payment links). Paste the full URLs.
   stripe: {
-    offseason:      "",             // https://buy.stripe.com/... (Complete GAA Off-Season Programme, one-off)
-    coachingOnline: "",             // https://buy.stripe.com/... (recurring price)
-    coachingHybrid: ""              // https://buy.stripe.com/... (recurring price)
+    offseason: "https://buy.stripe.com/fZu00j1sj93o7rE1Aadwc05"  // Complete GAA Off-Season Programme, one-off, €160
   },
 
   // Ad tracking. Leave blank to disable.
