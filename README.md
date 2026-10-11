@@ -8,7 +8,7 @@ Open `index.html` and find `const CONFIG` near the bottom.
 | Field | What to put in |
 |---|---|
 | `emailEndpoint` | The action URL of the MailerLite embedded signup form (Dashboard > Forms > this form > Embed). GitHub Pages is static-only, so the form posts straight to MailerLite rather than a custom backend. Until set, the form runs in demo mode and just shows the success message. |
-| `stripe.offseason` | Stripe Payment Link URL for the Complete GAA Off-Season Programme (one-off, €160). Create/edit it in Stripe Dashboard > Payment links. |
+| `stripe.offseason` | Stripe Payment Link URL for the Complete GAA Off-Season Programme (one-off, €130). Create/edit it in Stripe Dashboard > Payment links. |
 | `metaPixelId` | Meta Pixel ID for Instagram ads. |
 | `tiktokPixelId` | TikTok Pixel ID for TikTok ads. |
 | `instagramUrl / tiktokUrl` | Your profile links for the footer. |
@@ -18,7 +18,7 @@ Open `index.html` and find `const CONFIG` near the bottom.
 Events fired: `PageView`, `Lead` / `SubmitForm` (email signup), `InitiateCheckout` (Stripe button click). Optimise your ad campaigns for Lead first, then purchase once you have volume. For purchases, set the Stripe success URL to a thank-you page that fires a Purchase event.
 
 ## 2. Placeholders to replace before launch
-- **Price** (€160 for the Off-Season Programme) and programme contents should match what's actually configured in Stripe — keep these in sync if the price ever changes.
+- **Price** (€130 for the Off-Season Programme) and programme contents should match what's actually configured in Stripe — keep these in sync if the price ever changes.
 - **Momentum Performance details**: brand story, coach bio, credentials, results and testimonials are not included, because there was no source material at the time this was built. Add real ones only.
 - **Free lead magnet**: the "GAA Performance Primer" needs to exist as a PDF or email sequence sent by MailerLite.
 - **Contact email** `hello@gaaperformance.ie`.
