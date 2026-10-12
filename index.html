@@ -406,10 +406,10 @@ footer a:hover{color:var(--chalk)}
 
     <div class="cards" style="max-width:460px;margin-left:auto;margin-right:auto">
       <article class="card prog featured">
-        <span class="tag">Complete GAA Off-Season Programme</span>
+        <span class="tag">Flash sale &mdash; ends Wed 14th Oct</span>
         <h3>Build your engine before the season starts</h3>
         <p>Strength, speed, fitness and reduced injury risk in one plan, built for the off-season block.</p>
-        <div class="price">€130 <small>one-off</small></div>
+        <div class="price">€100 <small>was &euro;130 &middot; one-off</small></div>
         <ul>
           <li>12-week programme in TeamBuildr, phased for the off-season</li>
           <li>Gym and no-gym versions</li>
@@ -534,8 +534,11 @@ const CONFIG = {
   emailEndpoint: "",                // e.g. "https://your-endpoint.example/subscribe"
 
   // Stripe Payment Links (Dashboard > Payment links). Paste the full URLs.
+  // FLASH SALE ACTIVE: promo code GAA2026 applied via URL param, €130 -> €100.
+  // Ends 23:59 Wed 14 Oct 2026 — after that, remove "?prefilled_promo_code=GAA2026"
+  // from the URL below to revert to the plain €130 link.
   stripe: {
-    offseason: "https://buy.stripe.com/8x24gz3Ar2F0aDQ5Qqdwc06"  // Complete GAA Off-Season Programme, one-off, €130
+    offseason: "https://buy.stripe.com/8x24gz3Ar2F0aDQ5Qqdwc06?prefilled_promo_code=GAA2026"
   },
 
   // Ad tracking. Leave blank to disable.
