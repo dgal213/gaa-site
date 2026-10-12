@@ -128,6 +128,12 @@ header.top .btn{min-height:42px;padding:0 16px;font-size:.85rem;flex:none;white-
 .capture p{color:#3b4a42;font-size:.97rem;margin-bottom:18px}
 .capture ul{list-style:none;margin:0 0 18px;display:grid;gap:8px;font-size:.95rem;font-weight:600}
 .capture li::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--pitch-dark);margin-right:10px}
+.countdown{text-align:center}
+.countdown .sale-tag{display:inline-block;background:var(--pitch-dark);color:#fff;font-weight:900;text-transform:uppercase;letter-spacing:.04em;font-size:.78rem;padding:6px 14px;border-radius:999px;margin-bottom:12px}
+.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 22px}
+.countdown-unit{background:#fff;border-radius:12px;padding:12px 4px}
+.countdown-unit strong{display:block;font-size:1.8rem;font-weight:900;line-height:1}
+.countdown-unit span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:#4b5a52;margin-top:4px;font-weight:700}
 .field{display:grid;gap:10px}
 .field input[type=email],.field input[type=text]{
   width:100%;min-height:52px;padding:0 16px;border-radius:12px;border:1.5px solid #c9d2cc;
@@ -238,7 +244,7 @@ footer a:hover{color:var(--chalk)}
       <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a href="#get-primer" class="btn">Free Primer</a>
+    <a href="#flash-sale" class="btn">Flash Sale</a>
   </div>
 </header>
 
@@ -255,27 +261,17 @@ footer a:hover{color:var(--chalk)}
       <a href="#why" class="btn ghost" style="margin-left:8px">How it works</a>
     </div>
 
-    <aside class="capture" id="get-primer" aria-labelledby="cap-title">
-      <h3 id="cap-title">Free GAA Performance Primer</h3>
-      <p>A short, no-fluff guide to getting fitter, faster and more robust for the season ahead.</p>
-      <ul>
-        <li>Weekly training structure for in-season and off-season</li>
-        <li>Simple sprint and power drills you can do at the pitch</li>
-        <li>Injury-risk basics for hamstrings, groin and knees</li>
-      </ul>
-      <form class="lead-form" novalidate>
-        <div class="field">
-          <input type="text" name="name" placeholder="First name" autocomplete="given-name" aria-label="First name">
-          <input type="email" name="email" placeholder="Your email" autocomplete="email" required aria-label="Email address">
-          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="btn block" type="submit">Send me the primer</button>
-        </div>
-        <label class="consent">
-          <input type="checkbox" name="consent" required>
-          <span>I agree to receive training emails from GAA Performance. Unsubscribe any time. See our <a href="/privacy.html">privacy policy</a>.</span>
-        </label>
-        <p class="form-msg" role="status" aria-live="polite"></p>
-      </form>
+    <aside class="capture countdown" id="flash-sale" aria-labelledby="sale-title">
+      <span class="sale-tag">Flash sale</span>
+      <h3 id="sale-title">Off-Season Programme &mdash; now &euro;100</h3>
+      <p>For a limited time only. Ends 23:59, Wednesday 14th October.</p>
+      <div class="countdown-grid" data-countdown>
+        <div class="countdown-unit"><strong data-cd-d>00</strong><span>Days</span></div>
+        <div class="countdown-unit"><strong data-cd-h>00</strong><span>Hours</span></div>
+        <div class="countdown-unit"><strong data-cd-m>00</strong><span>Mins</span></div>
+        <div class="countdown-unit"><strong data-cd-s>00</strong><span>Secs</span></div>
+      </div>
+      <a href="#programmes" class="btn block">Claim the flash sale price</a>
     </aside>
   </div>
 </section>
@@ -429,7 +425,7 @@ footer a:hover{color:var(--chalk)}
     <span class="eyebrow">How it works</span>
     <h2>Simple from day one</h2>
     <div class="steps">
-      <div class="step"><h3>Choose your plan</h3><p>Start with the free primer or pick the programme that fits your stage of the season.</p></div>
+      <div class="step"><h3>Choose your plan</h3><p>Pick the programme that fits your stage of the season &mdash; now at the flash sale price.</p></div>
       <div class="step"><h3>Train on your schedule</h3><p>Follow clear sessions with video guidance. Work around club nights and matches.</p></div>
       <div class="step"><h3>Show up sharper</h3><p>Track your progress and carry the gains into match day.</p></div>
     </div>
@@ -458,22 +454,16 @@ footer a:hover{color:var(--chalk)}
 <section class="final">
   <div class="wrap">
     <span class="eyebrow">Start now</span>
-    <h2>Get the free primer</h2>
-    <p class="lead">Join GAA players getting smarter about how they train. Straight to your inbox.</p>
-    <div class="capture">
-      <form class="lead-form" novalidate>
-        <div class="field">
-          <input type="text" name="name" placeholder="First name" autocomplete="given-name" aria-label="First name">
-          <input type="email" name="email" placeholder="Your email" autocomplete="email" required aria-label="Email address">
-          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="btn block" type="submit">Send me the primer</button>
-        </div>
-        <label class="consent">
-          <input type="checkbox" name="consent" required>
-          <span>I agree to receive training emails from GAA Performance. Unsubscribe any time. See our <a href="/privacy.html">privacy policy</a>.</span>
-        </label>
-        <p class="form-msg" role="status" aria-live="polite"></p>
-      </form>
+    <h2>Don't miss the flash sale</h2>
+    <p class="lead">The Complete GAA Off-Season Programme is &euro;100 until the clock runs out.</p>
+    <div class="capture countdown">
+      <div class="countdown-grid" data-countdown>
+        <div class="countdown-unit"><strong data-cd-d>00</strong><span>Days</span></div>
+        <div class="countdown-unit"><strong data-cd-h>00</strong><span>Hours</span></div>
+        <div class="countdown-unit"><strong data-cd-m>00</strong><span>Mins</span></div>
+        <div class="countdown-unit"><strong data-cd-s>00</strong><span>Secs</span></div>
+      </div>
+      <a href="#programmes" class="btn block">Claim the flash sale price</a>
     </div>
   </div>
 </section>
@@ -498,7 +488,7 @@ footer a:hover{color:var(--chalk)}
   </div>
 </footer>
 
-<div class="sticky-cta" id="stickyCta"><a class="btn" href="#get-primer">Get the free primer</a></div>
+<div class="sticky-cta" id="stickyCta"><a class="btn" href="#flash-sale">Flash Sale: &euro;100</a></div>
 
 <script>
 /* ============ CONFIG: fill these in before going live ============ */
@@ -568,45 +558,41 @@ const CONFIG = {
     });
   });
 
-  // Email forms
-  document.querySelectorAll(".lead-form").forEach(function(form){
-    var msg = form.querySelector(".form-msg");
-    form.addEventListener("submit", function(e){
-      e.preventDefault();
-      msg.className = "form-msg"; msg.textContent = "";
-      var email = form.email.value.trim();
-      if(form.company.value){ return; } // honeypot
-      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ msg.className="form-msg err"; msg.textContent="Please enter a valid email."; return; }
-      if(!form.consent.checked){ msg.className="form-msg err"; msg.textContent="Please tick the box to agree."; return; }
-
-      var payload = { email: email, name: form.name.value.trim(), source: params.get("utm_source")||"", campaign: params.get("utm_campaign")||"", medium: params.get("utm_medium")||"", page: location.pathname, consent: true, ts: new Date().toISOString() };
-      var btn = form.querySelector("button"); btn.disabled = true;
-
-      function done(){
-        track("Lead","SubmitForm");
-        msg.className = "form-msg ok";
-        msg.textContent = "You're in. Check your inbox for the primer.";
-        form.reset(); btn.disabled = false;
-      }
-      function fail(){
-        msg.className = "form-msg err";
-        msg.textContent = "Something went wrong. Please try again.";
-        btn.disabled = false;
-      }
-
-      if(!CONFIG.emailEndpoint){ // demo mode until an endpoint is configured
-        console.warn("emailEndpoint not set. Payload:", payload);
-        done(); return;
-      }
-      fetch(CONFIG.emailEndpoint, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload) })
-        .then(function(r){ r.ok ? done() : fail(); })
-        .catch(fail);
+  // Flash-sale countdown: ends 23:59, Wed 14 Oct 2026 (Irish time)
+  var SALE_END = new Date("2026-10-14T22:59:00Z"); // 23:59 IST/BST
+  function paintCountdown(){
+    var diff = SALE_END.getTime() - Date.now();
+    var groups = document.querySelectorAll("[data-countdown]");
+    if(diff <= 0){
+      groups.forEach(function(g){
+        g.innerHTML = "<p style=\"font-weight:800;margin:0\">Flash sale has ended</p>";
+      });
+      return false;
+    }
+    var d = Math.floor(diff/86400000);
+    var h = Math.floor(diff%86400000/3600000);
+    var m = Math.floor(diff%3600000/60000);
+    var s = Math.floor(diff%60000/1000);
+    function pad(n){ return String(n).padStart(2,"0"); }
+    groups.forEach(function(g){
+      var dEl=g.querySelector("[data-cd-d]"), hEl=g.querySelector("[data-cd-h]"), mEl=g.querySelector("[data-cd-m]"), sEl=g.querySelector("[data-cd-s]");
+      if(dEl) dEl.textContent = pad(d);
+      if(hEl) hEl.textContent = pad(h);
+      if(mEl) mEl.textContent = pad(m);
+      if(sEl) sEl.textContent = pad(s);
     });
-  });
+    return true;
+  }
+  if(document.querySelector("[data-countdown]")){
+    paintCountdown();
+    var countdownTimer = setInterval(function(){
+      if(!paintCountdown()){ clearInterval(countdownTimer); }
+    }, 1000);
+  }
 
-  // Sticky mobile CTA: show after scrolling past the hero capture box
+  // Sticky mobile CTA: show after scrolling past the flash-sale box
   var cta = document.getElementById("stickyCta");
-  var box = document.getElementById("get-primer");
+  var box = document.getElementById("flash-sale");
   if("IntersectionObserver" in window && cta && box){
     new IntersectionObserver(function(en){
       cta.classList.toggle("show", !en[0].isIntersecting && en[0].boundingClientRect.top < 0);
