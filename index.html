@@ -192,6 +192,21 @@ header.top .btn{min-height:42px;padding:0 16px;font-size:.85rem;flex:none;white-
 .step::before{content:counter(s);position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;background:var(--pitch);color:var(--ink);font-weight:900;display:grid;place-items:center}
 .step p{color:var(--mute);margin-top:8px}
 
+/* how-it-works flow graphic */
+.flow{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:8px;margin-top:40px}
+.flow-step{flex:1 1 150px;min-width:140px;max-width:190px;text-align:center;background:var(--chalk);border-radius:var(--radius);padding:22px 14px}
+.flow-step h3{font-size:.98rem;margin:4px 0 6px;color:var(--ink)}
+.flow-step p{font-size:.84rem;color:#4b5a52;margin:0;line-height:1.4}
+.flow-icon{width:48px;height:48px;border-radius:50%;background:var(--pitch);display:grid;place-items:center;margin:0 auto 14px;color:var(--ink)}
+.flow-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.flow-arrow{align-self:center;flex:0 0 auto;color:var(--pitch-dark);display:grid;place-items:center}
+.flow-arrow svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:860px){
+  .flow{flex-direction:column;align-items:stretch}
+  .flow-step{max-width:none}
+  .flow-arrow{transform:rotate(90deg);margin:-6px auto}
+}
+
 /* faq */
 details{border-bottom:1px solid var(--line);padding:20px 0}
 summary{cursor:pointer;font-weight:800;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
@@ -424,10 +439,36 @@ footer a:hover{color:var(--chalk)}
   <div class="wrap">
     <span class="eyebrow">How it works</span>
     <h2>Simple from day one</h2>
-    <div class="steps">
-      <div class="step"><h3>Choose your plan</h3><p>Pick the programme that fits your stage of the season &mdash; now at the flash sale price.</p></div>
-      <div class="step"><h3>Train on your schedule</h3><p>Follow clear sessions with video guidance. Work around club nights and matches.</p></div>
-      <div class="step"><h3>Show up sharper</h3><p>Track your progress and carry the gains into match day.</p></div>
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg></div>
+        <h3>Purchase the programme</h3>
+        <p>Secure checkout with Stripe &mdash; card, Apple Pay or Google Pay.</p>
+      </div>
+      <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></div>
+      <div class="flow-step">
+        <div class="flow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></div>
+        <h3>Get your TeamBuildr email</h3>
+        <p>We send your login and temporary password straight away.</p>
+      </div>
+      <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></div>
+      <div class="flow-step">
+        <div class="flow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6l1 3H8l1-3z"/><rect x="5" y="6" width="14" height="15" rx="2"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+        <h3>Fill out your player profile</h3>
+        <p>A couple of quick questions so your programme fits you.</p>
+      </div>
+      <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></div>
+      <div class="flow-step">
+        <div class="flow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <h3>Sign up to TeamBuildr</h3>
+        <p>Set your password and your programme is already assigned.</p>
+      </div>
+      <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></div>
+      <div class="flow-step">
+        <div class="flow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="7 4 20 12 7 20 7 4"/></svg></div>
+        <h3>Begin</h3>
+        <p>Start session one and carry the gains into match day.</p>
+      </div>
     </div>
   </div>
 </section>
