@@ -60,7 +60,7 @@
     "priceCurrency": "EUR",
     "price": "100",
     "availability": "https://schema.org/InStock",
-    "priceValidUntil": "2026-10-15"
+    "priceValidUntil": "2026-10-16"
   }
 }
 </script>
@@ -296,7 +296,7 @@ footer a:hover{color:var(--chalk)}
     <aside class="capture countdown" id="flash-sale" aria-labelledby="sale-title">
       <span class="sale-tag">Flash sale</span>
       <h3 id="sale-title">Off-Season Programme &mdash; now &euro;100</h3>
-      <p>For a limited time only. Ends 23:59, Thursday 15th October.</p>
+      <p>For a limited time only. Ends 23:59, Friday 16th October.</p>
       <div class="countdown-grid" data-countdown>
         <div class="countdown-unit"><strong data-cd-d>00</strong><span>Days</span></div>
         <div class="countdown-unit"><strong data-cd-h>00</strong><span>Hours</span></div>
@@ -423,7 +423,7 @@ footer a:hover{color:var(--chalk)}
 
     <div class="cards" style="max-width:460px;margin-left:auto;margin-right:auto">
       <article class="card prog featured">
-        <span class="tag">Flash sale &mdash; ends Thu 15th Oct</span>
+        <span class="tag">Flash sale &mdash; ends Fri 16th Oct</span>
         <h3>Build your engine before the season starts</h3>
         <p>Strength, speed, fitness and reduced injury risk in one plan, built for the off-season block.</p>
         <div class="price">€100 <small>was &euro;130 &middot; one-off</small></div>
@@ -552,7 +552,7 @@ const CONFIG = {
 
   // Stripe Payment Links (Dashboard > Payment links). Paste the full URLs.
   // FLASH SALE ACTIVE: promo code GAA2026 applied via URL param, €130 -> €100.
-  // Ends 23:59 Thu 15 Oct 2026 — after that, remove "?prefilled_promo_code=GAA2026"
+  // Ends 23:59 Fri 16 Oct 2026 — after that, remove "?prefilled_promo_code=GAA2026"
   // from the URL below to revert to the plain €130 link.
   stripe: {
     offseason: "https://buy.stripe.com/8x24gz3Ar2F0aDQ5Qqdwc06?prefilled_promo_code=GAA2026"
@@ -614,8 +614,8 @@ const CONFIG = {
     });
   });
 
-  // Flash-sale countdown: ends 23:59, Thu 15 Oct 2026 (Irish time)
-  var SALE_END = new Date("2026-10-15T22:59:00Z"); // 23:59 IST/BST
+  // Flash-sale countdown: ends 23:59, Fri 16 Oct 2026 (Irish time)
+  var SALE_END = new Date("2026-10-16T22:59:00Z"); // 23:59 IST/BST
   function paintCountdown(){
     var diff = SALE_END.getTime() - Date.now();
     var groups = document.querySelectorAll("[data-countdown]");
